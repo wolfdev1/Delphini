@@ -17,13 +17,16 @@ public class SendMessageOnStreamStart {
     public void onChannelGoLive(ChannelGoLiveEvent event) {
             Delphini.jda
                     .getPresence().setActivity
-                            (Activity.streaming("Just Chatting", "https://twitch.tv/" + Config.CHANNEL));
-            EmbedBuilder eb = new EmbedBuilder()
+                            (Activity.streaming(event.getStream().getGameName(), "https://twitch.tv/" + Config.CHANNEL));
+            EmbedBuilder eb =
+                    new EmbedBuilder()
                     .setAuthor(event.getChannel().getName(), "https://twitch.tv/" + (event.getChannel().getId()),
                             "https://hipertextual.com/wp-content/uploads/2021/10/twitch.jpeg")
-                    .setTitle(event.getChannel().getId() + " is now streaming **" + event.getStream().getGameName() + "**")
+                    .setTitle(event.getChannel().getName() + " is now streaming **" + event.getStream().getGameName() + "**")
                     .setImage(event.getStream().getThumbnailUrl())
                     .setFooter("https://twitch.tv/" + (event.getChannel().getName()))
+                            .setTimestamp(event.getStream().getStartedAtInstant())
+                            .setFooter("Stream Notifier")
                     .setColor(Color.decode("#a759ff"))
                     ;
             Delphini.jda.getTextChannelById(Config.UPDATE_TEXT_CHANNEL_ID).sendMessageEmbeds(eb.build()).queue();
