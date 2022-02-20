@@ -21,9 +21,9 @@ public class SendMessageOnStreamStart {
             EmbedBuilder eb =
                     new EmbedBuilder()
                     .setAuthor(event.getChannel().getName(), "https://twitch.tv/" + (event.getChannel().getId()),
-                            "https://hipertextual.com/wp-content/uploads/2021/10/twitch.jpeg")
+                            "https://images-ext-2.discordapp.net/external/3GtvbWavFiR5s4tEvChG5Sry18YgU5lhAsphwPK864k/http/pngimg.com/uploads/twitch/twitch_PNG48.png?width=545&height=545")
                     .setTitle(event.getChannel().getName() + " is now streaming **" + event.getStream().getGameName() + "**")
-                    .setImage(event.getStream().getThumbnailUrl())
+                            .setThumbnail(event.getStream().getThumbnailUrl(1000, 1000))
                     .setFooter("https://twitch.tv/" + (event.getChannel().getName()))
                             .setTimestamp(event.getStream().getStartedAtInstant())
                             .setFooter("Stream Notifier")
