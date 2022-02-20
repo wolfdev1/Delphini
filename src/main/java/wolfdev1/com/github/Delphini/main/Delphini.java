@@ -40,7 +40,7 @@ public class Delphini {
             new SayCommand(eventHandler);
 
             jda = JDABuilder.createDefault(Secrets.DISCORD_BOT_TOKEN)
-                    .setActivity(Activity.streaming("Just Chatting", "https://twitch.tv/" + Config.CHANNEL))
+                    .setActivity((Activity.playing("Lunar Client")))
                     .enableIntents(GatewayIntent.GUILD_MEMBERS)
                     .setChunkingFilter(ChunkingFilter.ALL )
                     .build()

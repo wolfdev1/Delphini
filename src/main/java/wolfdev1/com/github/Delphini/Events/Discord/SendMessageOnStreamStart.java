@@ -4,6 +4,7 @@ import com.github.philippheuer.events4j.simple.SimpleEventHandler;
 import com.github.twitch4j.chat.events.channel.ChannelMessageEvent;
 import com.github.twitch4j.events.ChannelGoLiveEvent;
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.Activity;
 import wolfdev1.com.github.Delphini.main.Config;
 import wolfdev1.com.github.Delphini.main.Delphini;
 
@@ -17,6 +18,9 @@ public class SendMessageOnStreamStart {
         if(!event.getChannel().getId().equals(Config.CHANNEL)) {
             return;
         }else{
+            Delphini.jda
+                    .getPresence().setActivity
+                            (Activity.streaming("Just Chatting", "https://twitch.tv/" + Config.CHANNEL));
             EmbedBuilder eb = new EmbedBuilder()
                     .setAuthor(event.getChannel().getId(), "https://twitch.tv/" + (event.getChannel().getId()),
                             "https://hipertextual.com/wp-content/uploads/2021/10/twitch.jpeg")
