@@ -1,4 +1,4 @@
-package wolfdev1.com.github.Delphini.Events;
+package wolfdev1.com.github.Delphini.Events.Twitch;
 
 import com.github.philippheuer.events4j.simple.SimpleEventHandler;
 import com.github.twitch4j.chat.events.channel.ChannelMessageEvent;

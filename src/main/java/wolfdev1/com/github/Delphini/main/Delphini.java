@@ -9,7 +9,9 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.utils.ChunkingFilter;
-import wolfdev1.com.github.Delphini.Events.*;
+import wolfdev1.com.github.Delphini.Events.Discord.SendMessageOnStreamStart;
+import wolfdev1.com.github.Delphini.Events.Twitch.*;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -33,6 +35,7 @@ public class Delphini {
             new MessageLogger(eventHandler);
             new HelpCommand(eventHandler);
             new MinecraftCommand(eventHandler);
+            new SendMessageOnStreamStart(eventHandler);
             new TimeoutCommand(eventHandler);
             new SayCommand(eventHandler);
 
