@@ -21,7 +21,7 @@ public class SendMessageOnStreamStart {
             EmbedBuilder eb =
                     new EmbedBuilder()
                     .setAuthor(event.getChannel().getName(), "https://twitch.tv/" + (event.getChannel().getId()),
-                            "http://assets.stickpng.com/images/580b57fcd9996e24bc43c540.png")
+                            "https://cdn.discordapp.com/attachments/940697475088547870/945065039470141551/Webp.net-resizeimage.png")
                     .setTitle(event.getChannel().getName() + " is now streaming **" + event.getStream().getGameName() + "**")
                             .setThumbnail(event.getStream().getThumbnailUrl(1000, 1000))
                     .setFooter("https://twitch.tv/" + (event.getChannel().getName()))
