@@ -3,8 +3,7 @@ package wolfdev1.com.github.Delphini.Events;
 import com.github.philippheuer.events4j.simple.SimpleEventHandler;
 import com.github.twitch4j.chat.events.channel.ChannelMessageEvent;
 import com.github.twitch4j.common.enums.CommandPermission;
-import wolfdev1.com.github.DephiniBot.main.Config;
-
+import wolfdev1.com.github.Delphini.main.Config;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
