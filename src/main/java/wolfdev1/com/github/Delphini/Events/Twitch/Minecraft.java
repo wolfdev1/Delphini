@@ -4,8 +4,8 @@ import com.github.philippheuer.events4j.simple.SimpleEventHandler;
 import com.github.twitch4j.chat.events.channel.ChannelMessageEvent;
 import wolfdev1.com.github.Delphini.main.Config;
 
-public class MinecraftCommand {
-    public MinecraftCommand(SimpleEventHandler eventHandler) {
+public class Minecraft {
+    public Minecraft(SimpleEventHandler eventHandler) {
         eventHandler.onEvent(ChannelMessageEvent.class, this::onChannelMessage);
     }
     public void onChannelMessage(ChannelMessageEvent event)

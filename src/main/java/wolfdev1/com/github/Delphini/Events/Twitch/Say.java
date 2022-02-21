@@ -7,9 +7,9 @@ import wolfdev1.com.github.Delphini.main.Config;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class SayCommand {
+public class Say {
 
-    public SayCommand(SimpleEventHandler eventHandler) {
+    public Say(SimpleEventHandler eventHandler) {
         eventHandler.onEvent(ChannelMessageEvent.class, this::onChannelMessage);
     }
 

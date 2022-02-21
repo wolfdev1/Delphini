@@ -8,8 +8,8 @@ import wolfdev1.com.github.Delphini.main.Config;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class TimeoutCommand {
-    public TimeoutCommand(SimpleEventHandler eventHandler) {
+public class Timeout {
+    public Timeout(SimpleEventHandler eventHandler) {
         eventHandler.onEvent(ChannelMessageEvent.class, this::onChannelMessage);
     }
 

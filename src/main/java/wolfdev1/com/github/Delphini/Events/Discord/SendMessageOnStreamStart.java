@@ -5,6 +5,7 @@ import com.github.twitch4j.chat.events.channel.ChannelMessageEvent;
 import com.github.twitch4j.events.ChannelGoLiveEvent;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.entities.Channel;
 import wolfdev1.com.github.Delphini.main.Config;
 import wolfdev1.com.github.Delphini.main.Delphini;
 
@@ -15,6 +16,7 @@ public class SendMessageOnStreamStart {
         eventHandler.onEvent(ChannelGoLiveEvent.class, this::onChannelGoLive);
     }
     public void onChannelGoLive(ChannelGoLiveEvent event) {
+
             Delphini.jda
                     .getPresence().setActivity
                             (Activity.streaming(event.getStream().getGameName(), "https://twitch.tv/" + Config.CHANNEL));

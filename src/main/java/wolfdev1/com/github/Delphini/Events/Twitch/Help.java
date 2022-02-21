@@ -5,8 +5,8 @@ import com.github.twitch4j.chat.events.channel.ChannelMessageEvent;
 import com.github.twitch4j.common.enums.CommandPermission;
 import wolfdev1.com.github.Delphini.main.Config;
 
-public class HelpCommand {
-    public HelpCommand(SimpleEventHandler eventHandler) {
+public class Help {
+    public Help(SimpleEventHandler eventHandler) {
         eventHandler.onEvent(ChannelMessageEvent.class, this::onChannelMessage);
     }
     public void onChannelMessage(ChannelMessageEvent event) {

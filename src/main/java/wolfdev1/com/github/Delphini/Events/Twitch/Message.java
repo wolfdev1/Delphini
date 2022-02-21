@@ -5,9 +5,9 @@ import com.github.twitch4j.chat.events.channel.ChannelMessageEvent;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class MessageLogger {
+public class Message {
 
-    public MessageLogger(SimpleEventHandler eventHandler) {
+    public Message(SimpleEventHandler eventHandler) {
         eventHandler.onEvent(ChannelMessageEvent.class, this::onChannelMessage);
     }
 
