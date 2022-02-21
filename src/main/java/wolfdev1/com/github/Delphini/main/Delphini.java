@@ -13,6 +13,7 @@ import net.dv8tion.jda.api.utils.ChunkingFilter;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
 import wolfdev1.com.github.Delphini.Events.Discord.GitHubCmd;
+import wolfdev1.com.github.Delphini.Events.Discord.GitHubRepo;
 import wolfdev1.com.github.Delphini.Events.Discord.SendMessageOnStreamStart;
 import wolfdev1.com.github.Delphini.Events.Twitch.*;
 
@@ -60,6 +61,7 @@ public class Delphini {
                     .setActivity((Activity.playing("Lunar Client")))
                     .enableIntents(GatewayIntent.GUILD_MEMBERS)
                     .addEventListeners(new GitHubCmd())
+                    .addEventListeners(new GitHubRepo())
                     .setChunkingFilter(ChunkingFilter.ALL )
 
                     .build()
