@@ -77,7 +77,7 @@ public class GitHubCmd extends ListenerAdapter {
                                                 (user.getTwitterUsername() == null
                                                         ? "*This user has not connected a twitter account.*" : user.getTwitterUsername()), true)
                                                  .addField("Organization(s)",
-                                                         (user.getOrganizations() == null ? "*User is not in a organization*" : String.valueOf(user.getOrganizations().size())),
+                                                         (user.getOrganizations().size() == 0 ? "*User is not in a organization*" : String.valueOf(user.getOrganizations().size())),
                                                          false)
                                                  .addField("", (user.getPublicGistCount() < 1 ?
                                                          "*User has no public gist*" : String.valueOf(user.getPublicGistCount())), false)
