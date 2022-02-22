@@ -8,8 +8,8 @@ import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GHUser;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.HttpException;
-import wolfdev1.com.github.Delphini.main.Config;
-import wolfdev1.com.github.Delphini.main.Delphini;
+import wolfdev1.com.github.Delphini.Config;
+import wolfdev1.com.github.Delphini.DelphiniApp;
 import java.awt.*;
 import java.io.IOException;
 import java.time.Instant;
@@ -52,7 +52,7 @@ public class GitHubRepo extends ListenerAdapter
                                     }
                                     else
                                     {
-                                        GitHub github = Delphini.github;
+                                        GitHub github = DelphiniApp.github;
                                         GHUser user = github.getUser(args[1]);
 
                                         if(user.getName() == null)

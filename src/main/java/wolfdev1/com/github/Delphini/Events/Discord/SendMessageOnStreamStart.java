@@ -1,13 +1,11 @@
 package wolfdev1.com.github.Delphini.Events.Discord;
 
 import com.github.philippheuer.events4j.simple.SimpleEventHandler;
-import com.github.twitch4j.chat.events.channel.ChannelMessageEvent;
 import com.github.twitch4j.events.ChannelGoLiveEvent;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Activity;
-import net.dv8tion.jda.api.entities.Channel;
-import wolfdev1.com.github.Delphini.main.Config;
-import wolfdev1.com.github.Delphini.main.Delphini;
+import wolfdev1.com.github.Delphini.Config;
+import wolfdev1.com.github.Delphini.DelphiniApp;
 
 import java.awt.*;
 
@@ -17,7 +15,7 @@ public class SendMessageOnStreamStart {
     }
     public void onChannelGoLive(ChannelGoLiveEvent event) {
 
-            Delphini.jda
+            DelphiniApp.jda
                     .getPresence().setActivity
                             (Activity.streaming(event.getStream().getGameName(), "https://twitch.tv/" + Config.CHANNEL));
             EmbedBuilder eb =
@@ -31,7 +29,7 @@ public class SendMessageOnStreamStart {
                             .setFooter("Stream Notifier")
                     .setColor(Color.decode("#a759ff"))
                     ;
-            Delphini.jda.getTextChannelById(Config.UPDATE_TEXT_CHANNEL_ID).sendMessageEmbeds(eb.build()).queue();
+            DelphiniApp.jda.getTextChannelById(Config.UPDATE_TEXT_CHANNEL_ID).sendMessageEmbeds(eb.build()).queue();
             System.out.println("The channel " + Config.CHANNEL + " is now streaming!");
 
     }

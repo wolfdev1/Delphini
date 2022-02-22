@@ -1,4 +1,4 @@
-package wolfdev1.com.github.Delphini.main;
+package wolfdev1.com.github.Delphini;
 
 import com.github.philippheuer.credentialmanager.domain.OAuth2Credential;
 import com.github.philippheuer.events4j.simple.SimpleEventHandler;
@@ -22,7 +22,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Delphini {
+public class DelphiniApp {
     public static JDA jda;
     public static GitHub github;
 

@@ -6,8 +6,8 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 import org.kohsuke.github.GHUser;
 import org.kohsuke.github.GitHub;
-import wolfdev1.com.github.Delphini.main.Config;
-import wolfdev1.com.github.Delphini.main.Delphini;
+import wolfdev1.com.github.Delphini.Config;
+import wolfdev1.com.github.Delphini.DelphiniApp;
 import java.awt.*;
 import java.io.IOException;
 import java.time.Instant;
@@ -29,7 +29,7 @@ public class GitHubCmd extends ListenerAdapter {
                     }
                     else
                     {
-                        GitHub github = Delphini.github;
+                        GitHub github = DelphiniApp.github;
                         if (args.length < 2)
                         {
                             EmbedBuilder error = new EmbedBuilder()
@@ -53,6 +53,7 @@ public class GitHubCmd extends ListenerAdapter {
                             }
                             else
                             {
+
                                 GHUser user = github.getUser(args[1]);
 
                                  EmbedBuilder embedBuilder =
@@ -86,7 +87,7 @@ public class GitHubCmd extends ListenerAdapter {
                                         .setColor(Objects.requireNonNull
                                                 (event.getMember()).getColor())
                                         ;
-                                event.getMessage().replyEmbeds(embedBuilder.build()).queue();
+                                event.getChannel().sendMessageEmbeds(embedBuilder.build()).queue();
                             }
                         }
                     }
@@ -96,4 +97,3 @@ public class GitHubCmd extends ListenerAdapter {
         }
     }
 }
-

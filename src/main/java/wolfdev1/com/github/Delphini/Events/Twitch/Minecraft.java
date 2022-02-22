@@ -2,7 +2,7 @@ package wolfdev1.com.github.Delphini.Events.Twitch;
 
 import com.github.philippheuer.events4j.simple.SimpleEventHandler;
 import com.github.twitch4j.chat.events.channel.ChannelMessageEvent;
-import wolfdev1.com.github.Delphini.main.Config;
+import wolfdev1.com.github.Delphini.Config;
 
 public class Minecraft {
     public Minecraft(SimpleEventHandler eventHandler) {

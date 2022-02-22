@@ -3,9 +3,10 @@ package wolfdev1.com.github.Delphini.Events.Twitch;
 import com.github.philippheuer.events4j.simple.SimpleEventHandler;
 import com.github.twitch4j.chat.events.channel.ChannelMessageEvent;
 import com.github.twitch4j.common.enums.CommandPermission;
-import wolfdev1.com.github.Delphini.main.Config;
+import wolfdev1.com.github.Delphini.Config;
 
 public class Help {
+
     public Help(SimpleEventHandler eventHandler) {
         eventHandler.onEvent(ChannelMessageEvent.class, this::onChannelMessage);
     }
@@ -20,7 +21,7 @@ public class Help {
                     event.reply(event.getTwitchChat(), """
                             Bot feature list:\s
                             Viewer Counter
-                            Moderation Commands (Soon)
+                            Moderation Commands (Soooooon)
                             Minecraft server info
                             And so much more...\s""");
                     //Mierda filtre mi token (de nuevo ._.)
@@ -49,7 +50,7 @@ public class Help {
                                         "Details: \n" +
                                         "Sends you the minecraft java server info");
                             }else{
-                                event.reply(event.getTwitchChat(), args[1] + " is not an feature or command, try again 🐈");
+                                event.reply(event.getTwitchChat(), args[1] + " is not an feature or command, try again");
                             }
                         }
                     }

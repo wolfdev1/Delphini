@@ -1,4 +1,4 @@
-package wolfdev1.com.github.Delphini.main;
+package wolfdev1.com.github.Delphini;
 
 public class Config {
     public static String BOT_PREFIX = "$";
