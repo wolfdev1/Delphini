@@ -49,7 +49,8 @@ public class GitHubCmd extends ListenerAdapter {
                             GHUser ghUser = github.getUser(args[1]);
                             if(ghUser.getName() == null)
                             {
-                                event.getMessage().reply("There was no Github user found with the name **" + args[1] + "**").queue();
+                                event.getMessage().reply
+                                        ("There was no Github user found with the name **" + args[1] + "**").queue();
                             }
                             else
                             {
@@ -65,20 +66,26 @@ public class GitHubCmd extends ListenerAdapter {
                                                  .setThumbnail(user.getAvatarUrl())
                                         .addField("Followers",
                                                 (user.getFollowersCount() < 1 ?
-                                                        "*This user has no followers*" : String.valueOf(user.getFollowersCount())) , true)
+                                                        "*This user has no followers*" :
+                                                        String.valueOf(user.getFollowersCount())) , true)
                                         .addField("Following",
                                                 (user.getFollowingCount() < 1 ?
-                                                        "*This user does not follow anyone*" : String.valueOf(user.getFollowingCount())), true)
+                                                        "*This user does not follow anyone*" :
+                                                        String.valueOf(user.getFollowingCount())), true)
                                         .addField("Repositories",
                                                 (user.getRepositories().size() < 1 ?
-                                                        "*This user has no repositories*" : String.valueOf(user.getRepositories().size())), false)
+                                                        "*This user has no repositories*" :
+                                                        String.valueOf(user.getRepositories().size())), false)
                                         .addField("Created at", String.valueOf
                                                 (user.getCreatedAt().toInstant()), true)
                                         .addField("Twitter",
                                                 (user.getTwitterUsername() == null
-                                                        ? "*This user has not connected a twitter account.*" : user.getTwitterUsername()), true)
+                                                        ? "*This user has not connected a twitter account.*" :
+                                                        user.getTwitterUsername()), true)
                                                  .addField("Organization(s)",
-                                                         (user.getOrganizations().size() == 0 ? "*User is not in a organization*" : String.valueOf(user.getOrganizations().size())),
+                                                         (user.getOrganizations().size() == 0 ?
+                                                                 "*User is not in a organization*" :
+                                                                 String.valueOf(user.getOrganizations().size())),
                                                          false)
                                                  .addField("", (user.getPublicGistCount() < 1 ?
                                                          "*User has no public gist*" : String.valueOf(user.getPublicGistCount())), false)

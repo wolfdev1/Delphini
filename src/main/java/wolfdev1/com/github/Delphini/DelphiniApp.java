@@ -7,6 +7,7 @@ import com.github.twitch4j.TwitchClientBuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.interactions.commands.Command;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.utils.ChunkingFilter;
@@ -60,8 +61,8 @@ public class DelphiniApp {
             jda = JDABuilder.createDefault(Secrets.DISCORD_BOT_TOKEN)
                     .setActivity((Activity.playing("Lunar Client")))
                     .enableIntents(GatewayIntent.GUILD_MEMBERS)
-                    .addEventListeners(new GitHubCmd())
                     .addEventListeners(new GitHubRepo())
+                    .addEventListeners(new GitHubCmd())
                     .setChunkingFilter(ChunkingFilter.ALL )
 
                     .build()

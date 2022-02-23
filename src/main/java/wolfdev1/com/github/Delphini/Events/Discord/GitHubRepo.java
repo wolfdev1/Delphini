@@ -1,4 +1,4 @@
-package wolfdev1.com.github.Delphini.Events.Discord;
+    package wolfdev1.com.github.Delphini.Events.Discord;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -21,7 +21,6 @@ public class GitHubRepo extends ListenerAdapter
     @Override
     public void onMessageReceived(@NotNull MessageReceivedEvent event)
     {
-
         String[] args = event.getMessage().getContentRaw().split(" ");
 
 
