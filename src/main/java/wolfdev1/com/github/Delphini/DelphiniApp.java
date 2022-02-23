@@ -13,9 +13,7 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.utils.ChunkingFilter;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
-import wolfdev1.com.github.Delphini.Events.Discord.GitHubCmd;
-import wolfdev1.com.github.Delphini.Events.Discord.GitHubRepo;
-import wolfdev1.com.github.Delphini.Events.Discord.SendMessageOnStreamStart;
+import wolfdev1.com.github.Delphini.Events.Discord.*;
 import wolfdev1.com.github.Delphini.Events.Twitch.*;
 
 import javax.security.auth.login.LoginException;
@@ -63,6 +61,8 @@ public class DelphiniApp {
                     .enableIntents(GatewayIntent.GUILD_MEMBERS)
                     .addEventListeners(new GitHubRepo())
                     .addEventListeners(new GitHubCmd())
+                    .addEventListeners(new JoinLogger())
+                    .addEventListeners(new LeaveLogger())
                     .setChunkingFilter(ChunkingFilter.ALL )
 
                     .build()
