@@ -33,7 +33,8 @@ public class GitHubCmd extends ListenerAdapter {
                         if (args.length < 2)
                         {
                             EmbedBuilder error = new EmbedBuilder()
-                                    .setAuthor(event.getJDA().getSelfUser().getName(), null, event.getJDA().getSelfUser().getAvatarUrl())
+                                    .setAuthor(event.getJDA().getSelfUser().getName(), null, 
+                                               event.getJDA().getSelfUser().getAvatarUrl())
                                     .setTitle("Error")
                                     .setColor(Color.decode("#ff4242"))
                                     .setDescription("Usage:\n" +
