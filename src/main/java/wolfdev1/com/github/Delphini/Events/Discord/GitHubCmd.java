@@ -37,7 +37,7 @@ public class GitHubCmd extends ListenerAdapter {
                                     .setTitle("Error")
                                     .setColor(Color.decode("#ff4242"))
                                     .setDescription("Usage:\n" +
-                                            "`" + Config.BOT_PREFIX + "github wolfdev1`\n" +
+                                            "`" + Config.BOT_PREFIX + "github username`\n" +
                                             "`GitHub Command`")
                                     .setTimestamp(Instant.now())
                                     .setFooter("GitHub Help")
